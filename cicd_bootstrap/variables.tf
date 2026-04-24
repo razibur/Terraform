@@ -10,30 +10,30 @@ variable "github_oauth_token" {
   
 }
 
-variable "dev-project-id" {
+variable "dev_project-id" {
   type = string
 }
 
-variable "qa-project-id" {
+variable "qa_project-id" {
   type = string
 }
 
 
-variable "vcs-identifier" {
+variable "vcs_identifier" {
   
 }
 
-variable "enable-services" {
+variable "enable_services" {
   type = list
   default = ["iam.googleapis.com","cloudresourcemanager.googleapis.com", "compute.googleapis.com", "redis.googleapis.com"]
 }
 
 variable "dev-main-branch" {
   type = string
-  default = "04_06_dev"
+  default = "dev"
 }
 
 variable "qa-main-branch" {
   type = string
-  default = "04_06_qa"
+  default = "qa"
 }

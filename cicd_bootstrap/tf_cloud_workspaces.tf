@@ -15,7 +15,7 @@ resource "tfe_workspace" "dev" {
     queue_all_runs = false
     file_triggers_enabled = false
     vcs_repo {
-      identifier = var.vcs-identifier
+      identifier = var.vcs_identifier
       branch = var.dev-main-branch
       oauth_token_id = tfe_oauth_client.oauth.oauth_token_id
     }
@@ -30,7 +30,7 @@ resource "tfe_workspace" "qa" {
     queue_all_runs = false
     file_triggers_enabled = false
     vcs_repo {
-      identifier = var.vcs-identifier
+      identifier = var.vcs_identifier
       branch = var.qa-main-branch
       oauth_token_id = tfe_oauth_client.oauth.oauth_token_id
     }
