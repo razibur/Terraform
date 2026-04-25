@@ -1,7 +1,12 @@
-#output "instance_ami" {
-#  value = aws_instance.web.ami
-#}
+### OUTPUTS ###
+output "nginx-public-ip" {
+    value = google_compute_instance.nginx_instance.network_interface[0].access_config[0].nat_ip
+}
 
-#output "instance_arn" {
-#  value = aws_instance.web.arn
-#}
+output "webserver-ips" {
+    value = module.webservers.webserver-ips
+}
+
+output "db-private-ip" {
+    value = google_compute_instance.mysqldb.network_interface[0].network_ip
+}
